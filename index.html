@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Website</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 155, 63);
+  }
+  header {
+    background-color: transparent;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+  }
+  .image{
+    background-image: url("https://cdn.pixabay.com/photo/2018/10/18/09/24/sunset-3755861_960_720.jpg");
+    background-size: cover;
+    height: 100vh;
+  }
+
+  nav {
+    float: right;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  nav ul li a {
+    color: rgb(143, 40, 54);
+    text-decoration: none;
+    font-size: 28px;
+  }
+  li:hover{
+    text-decoration: underline;
+    text-decoration-color:brown ;
+  }
+  section {
+    padding: 20px;
+  }
+  h1{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .p{
+    text-align: center;
+    font-size: 26px;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  h1:hover{
+    text-decoration: underline;
+    text-decoration-color: brown;
+    text-decoration-thickness: 4px;
+  }
+  a:hover{
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: brown;
+    text-decoration-thickness: 4px;
+  }
+  h2:hover{
+    text-decoration: underline;
+    text-decoration-color: brown;
+    text-decoration-thickness: 4px;
+  }
+  .p:hover{
+    color: white;
+    text-decoration: underline;
+    text-decoration-color:black ;
+  }
+  .top-para{
+    color: #fff;
+    font-size: 54px;
+    font-style: oblique;
+
+  }
+  .top-para:hover{
+    text-decoration: underline;
+    color: black;
+    text-decoration-color: brown;
+  }
+ .para{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+ }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .col-4 {
+    width: 33.33%;
+    background-color: #c2baba;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 3px;
+  }
+  .rows {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+   
+  .col-4:hover{
+    background-color: brown;
+    color: white;
+    box-shadow: 15px 15px 55px 3px black;
+  } 
+</style>
+</head>
+<body>
+  <section class="image">
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      
+    </ul>
+  </nav>
+  <Section style="padding-top: 10%;">
+  <p class="top-para"> Welcome to the Plant Zone</p>
+  <h2 class="h2">Contact Us</h2>
+</Section>
+</header>
+  
+</section>
+<section>
+  <h1>Superior Quality</h1>
+  <p class="p">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality
+    intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after
+    maintainable products without collateral.</p> 
+</section>
+<section>
+  <div class="rows">
+  <div class="col-4">
+    <h1 class="heading">Ideate</h1>
+    <p class="para">This has been a fascinating experience to check out. We innovate stuff that are out of this world.</p>
+    <p class="para" style="text-align: center;"> WeInnovate like no one else</p>
+  </div>
+  <div class="col-4">
+    <h1 class="heading">Integrate</h1>
+    <p class="para">This has been a fascinating experience to check out. We innovate stuff that are out of this world.</p>
+    <p class="para" style="text-align: center;"> WeInnovate like no one else</p>
+  </div>
+  <div class="col-4">
+    <h1 class="heading"> Innovate</h1>
+    <p class="para">This has been a fascinating experience to check out. We innovate stuff that are out of this world.</p>
+    <p class="para" style="text-align: center;"> WeInnovate like no one else</p>
+  </div>
+</div>
+</section>
+<h2 style="font-size: 48px; text-align: center;">Contact Us</h2>
+<section style="background-color: brown; padding: 5px; margin: 18%; margin-top: 2%;">
+    <h1> Book an appointment to visit our chemical plants</h1>
+  <form class="col-6" id="contactForm">
+    <input type="text" name="firstname" placeholder="Your First Name" required><br>
+    <input type="text" name="lastname" placeholder="Your Last Name" required><br>
+    <input type="email" name ="email" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+<script>
+  
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    var formDataObject = {};
+    formData.forEach(function(value, key){
+      formDataObject[key] = value;
+    });
+    console.log(formDataObject);
+  });
+</script>
+
+</body>
+</html>
